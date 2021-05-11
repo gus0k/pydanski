@@ -1,6 +1,8 @@
 # %%
+
 import matplotlib.pyplot as plt
 import numpy as np
+
 import pydanski as pdk
 
 # %%
@@ -13,3 +15,11 @@ ax.legend()
 pdk.plots.remove_duplicate_legends(fig, ax)
 fig.show()
 
+# %%
+
+A = np.array([1, 2, 3, 4])
+
+fig, ax = plt.subplots()
+ax.bar(np.arange(4), A)
+pdk.plots.add_text_to_bars(fig, ax, ["A", "B", "C", "D"])
+fig.show()
